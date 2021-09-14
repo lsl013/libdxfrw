@@ -69,6 +69,10 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
+    <Lib>
+      <AdditionalDependencies>libiconv_static.lib;libiconv_dynamic.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\packages\libiconv.1.14.0.11\build\native\lib\v110\Win32\Release\static\cdecl;.\packages\libiconv.1.14.0.11\build\native\lib\v110\Win32\Release\dynamic\cdecl;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="..\src\drw_base.h" />
