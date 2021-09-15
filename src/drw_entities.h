@@ -274,7 +274,8 @@ protected:
     virtual bool parseDwg(DRW::Version version, dwgBuffer *buf, duint32 bs=0);
 
 public:
-    DRW_Coord secPoint;        /*!< second point, code 11, 21 & 31 */
+    /*!< second point(end point), code 11, 21 & 31 */
+    DRW_Coord secPoint;        
 };
 
 //! Class to handle ray entity

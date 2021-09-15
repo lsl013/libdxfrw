@@ -73,7 +73,7 @@ bool extractText(std::string inName){
 // Sameple
 int main(int argc, char* argv[])
 {
-	std::string FileName = "E:/Gits/libdxfrw/dwg2text/logo.dxf";
+	std::string FileName = "E:/Gits/libdxfrw/dwg2text/SampleCad.dxf";
 	dx_data fData;
 
 	dx_iface* input = new dx_iface();
