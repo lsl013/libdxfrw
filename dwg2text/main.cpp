@@ -47,25 +47,39 @@ bool extractText(std::string inName){
     return badState;
 }
 
-int main(int argc, char *argv[]) {
-    bool badState = false;
-    std::string outName;
-    if (argc != 2) {
-        usage();
-        return 1;
-    }
+//int main(int argc, char *argv[]) {
+//    bool badState = false;
+//    std::string outName;
+//    if (argc != 2) {
+//        usage();
+//        return 1;
+//    }
+//
+//    std::string fileName = argv[1];
+//
+//    if (badState) {
+//        std::cout << "Bad options." << std::endl;
+//        usage();
+//        return 1;
+//    }
+//
+//    bool ok = extractText(fileName);
+//    if (ok)
+//        return 0;
+//    else
+//        return 1;
+//}
 
-    std::string fileName = argv[1];
+// Sameple
+int main(int argc, char* argv[])
+{
+	std::string FileName = "E:/Gits/libdxfrw/dwg2text/logo.dxf";
+	dx_data fData;
 
-    if (badState) {
-        std::cout << "Bad options." << std::endl;
-        usage();
-        return 1;
-    }
-
-    bool ok = extractText(fileName);
-    if (ok)
-        return 0;
-    else
-        return 1;
+	dx_iface* input = new dx_iface();
+	bool bSuccessful = input->printText(FileName, &fData);
+	if (!bSuccessful) {
+		std::cout << "Error reading file " << FileName << std::endl;
+	}
+    return 0;
 }

@@ -240,9 +240,16 @@ protected:
     virtual bool parseDwg(DRW::Version version, dwgBuffer *buf, duint32 bs=0);
 
 public:
-    DRW_Coord basePoint;      /*!<  base point, code 10, 20 & 30 */
-    double thickness;         /*!< thickness, code 39 */
-    DRW_Coord extPoint;       /*!<  Dir extrusion normal vector, code 210, 220 & 230 */
+
+    /*!<  base point, code 10, 20 & 30 */
+    DRW_Coord basePoint;
+
+    /*!< thickness, code 39 */
+    double thickness;
+
+    /*!<  Dir extrusion normal vector, code 210, 220 & 230 */
+    DRW_Coord extPoint; 
+
     // TNick: we're not handling code 50 - Angle of the X axis for
     // the UCS in effect when the point was drawn
 };
